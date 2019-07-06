@@ -10,13 +10,16 @@
 <body>
     <h1>Note Taking App</h1>
     <input id="search-text" placeholder="filter notes">
+    <select id="filter-by">
+        <option value="byEdited">Sort by Last edited</option>
+        <option value="byCreated">Sort by recently created</option>
+        <option value="byAlphabetical">Sort Alphabetically</option>
+    </select>
     <div id="notes">
 
     </div>
     <button id="create-note">Create Note</button>
-    <label>
-        <input type="checkbox" id="for-fun"> Check me for fun
-    </label>
+    
     
     <script src="notes-app.js"></script>
 </body>
