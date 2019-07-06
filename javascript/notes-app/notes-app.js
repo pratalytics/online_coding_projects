@@ -39,23 +39,19 @@ const renderNotes = (note, filters) => {
 
 renderNotes(notes, filters)
 
-//Understanding DOM
-// const p =document.querySelectorAll('p')
-// p.forEach(x => x.textContent = '**************' )
-
-// // Add a new element
-// const newParagraph = document.createElement('p')
-// newParagraph.textContent = 'This is a new element from Javascript file'
-// document.querySelector('body').appendChild(newParagraph)
 
 document.querySelector('#create-note').addEventListener('click', (e) => e.target.textContent = 'The buttone was clicked')
 
-document.querySelector('#remove-note').addEventListener('click', (e) => {
-    document.querySelectorAll('.note').forEach((e) => e.remove())
-})
+
 
 document.querySelector('#search-text').addEventListener('input', (e) => {
     filters.searchText = e.target.value
     renderNotes(notes, filters) 
 })
 
+//Prevents default behaviour of the form
+document.querySelector('#name-form').addEventListener('submit', (el) => {
+    el.preventDefault()
+    console.log(el.target.elements.firstName.value)
+    el.target.elements.firstName.value = ''
+})
