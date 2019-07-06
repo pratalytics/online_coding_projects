@@ -49,9 +49,8 @@ document.querySelector('#search-text').addEventListener('input', (e) => {
     renderNotes(notes, filters) 
 })
 
-//Prevents default behaviour of the form
-document.querySelector('#name-form').addEventListener('submit', (el) => {
-    el.preventDefault()
-    console.log(el.target.elements.firstName.value)
-    el.target.elements.firstName.value = ''
+//Testing checkbox functionality
+
+document.querySelector('#for-fun').addEventListener('change', (el) =>{
+    console.log(el.target.checked)
 })
