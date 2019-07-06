@@ -25,6 +25,7 @@ const filters = {
     searchText: ''
 }
 
+
 const renderNotes = (note, filters) => {
     const filteredNotes = note.filter((el) => el.title.toLowerCase().includes(filters.searchText.toLowerCase()))
     console.log(filteredNotes)
@@ -54,3 +55,37 @@ document.querySelector('#search-text').addEventListener('input', (e) => {
 document.querySelector('#filter-by').addEventListener('change', (el) => {
     console.log(el.target.value)
 })
+
+// Create and Update Data in localstorage (CrUd)
+//localStorage.setItem('location', 'Mumbai')
+
+// Read data from local storage (cRud)
+
+//console.log(localStorage.getItem('location'))
+
+// Delete data from local storage
+//localStorage.removeItem('location')
+
+// Clear the data from local storage
+//localStorage.clear()
+
+
+// Store object local storage
+
+// const user = {
+//     name: 'Prathamesh',
+//     age: 32,
+//     gender: 'male',
+//     nationality: 'Indian',
+//     isMarried: true
+// }
+
+// const userJSON = JSON.stringify(user)
+
+// console.log(userJSON)
+// localStorage.setItem('user',userJSON)
+
+
+const userJSON = localStorage.getItem('user')
+const user = JSON.parse(userJSON)
+console.log(user.name)
