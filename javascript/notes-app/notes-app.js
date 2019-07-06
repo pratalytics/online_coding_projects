@@ -49,8 +49,8 @@ document.querySelector('#search-text').addEventListener('input', (e) => {
     renderNotes(notes, filters) 
 })
 
-//Testing checkbox functionality
+// Testing dropdown functionality
 
-document.querySelector('#for-fun').addEventListener('change', (el) =>{
-    console.log(el.target.checked)
+document.querySelector('#filter-by').addEventListener('change', (el) => {
+    console.log(el.target.value)
 })
