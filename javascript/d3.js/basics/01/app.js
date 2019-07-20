@@ -1,33 +1,26 @@
+const canvas = d3.select('.canva')
 
-const canvas = d3.select(".canva")
+//d3.select('p').style('color', 'red')
+//d3.select('#specPara').style('color', 'red')
+//d3.select('.para').style('color', 'red')
+//d3.selectAll('p').style('color', 'blue')
+//d3.selectAll('.para').style('color', 'blue')
 
-// Add an svg element to it
+// Selecting Nested Element
 
-const svg = canvas.append('svg')
-            .attr('width', '800')
-            .attr('height', '250')
+//d3.select('table').style('color', 'red')
 
-svg.append('circle')
-    .attr('cx', '400')
-    .attr('cy', '125')
-    .attr('r', '50')
-    .attr('fill', 'pink')
+//d3.select('thead').style('color', 'blue')
 
-svg.append('rect')
-    .attr('width', 100)
-    .attr('height', 250)
-    .attr('x', 200)
-    .attr('y', 50)
-    .attr('fill', 'green')
+//d3.select('tbody').selectAll('td:first-child').style('color', 'Orange')
 
-svg.append('line')
-    .attr('x1', 130)
-    .attr('x2', 45)
-    .attr('y1', 200)
-    .attr('y2', 70)
-    .attr('stroke', 'grey')
-
-svg.append('text')
-    .text('Hello there')
-    .attr('x', 500)
-    .attr('y', 50)
+d3.select('#specPara').text('This paragraph is via d3.')
+d3.select('#div1').append('h1').text('H1 tag')
+d3.select('#div1').insert('h1').text('Inserted H1 tag')
+d3.select('#div1 h1:last-child').remove()
+d3.selectAll('.para').html('<button>Fire Button</button>')
+d3.select('#div1 p:nth-last-child(3)').attr('class', 'error')
+d3.select('input')
+    .property('checked', true)
+d3.select('#specPara')
+    .classed('error', true)
