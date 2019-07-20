@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="/d3.min.js"></script>
+    <style>
+        .error {
+            color: crimson
+        }
+    </style>
     <title>D3 testing</title>
 </head>
+
 <body>
-    <div class="canva">
-        
+    <div id="div1">
+        <p class="para">p1</p>
+        <p class="para">p2</p>
+        <p id="specPara">p3 This has id</p>
+        <p>p4</p>
+        <p>p5</p>
+        <p>
+            <label>
+                <input type="checkbox"> Tick Me
+            </label>
+        </p>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <th>Num 1</th>
+                <th>Num 2</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>One</td>
+                    <td>Two</td>
+                </tr>
+                <tr>
+                    <td>three</td>
+                    <td>four</td>
+                </tr>
+                <tr>
+                    <td>Five</td>
+                    <td>Six</td>
+                </tr>
+            </tbody>
+
+        </table>
     </div>
     <script src="/app.js"></script>
 </body>
+
 </html>
